@@ -32,7 +32,7 @@
     </p>
     <p>
     
-      <span class="query"></sapn><strong>2. Write your student number</strong></span><br>
+      <span class="query"></span><strong>2. Write your student number</strong></span><br>
       <div id="survey-form">  
       <input type="number" name="id">
       
@@ -63,7 +63,7 @@
     
       <span class="query"><strong>5.Give us your overall evaluation and feedback about the previous study.</strong></span><br>
       <div id="survey-form">  
-      <textarea id="feedback" cols="50" rows="25"></textarea><br>
+      <textarea id="feedback"></textarea><br>
     
     <input type ="submit" value="Submit your answers">
     </div>
