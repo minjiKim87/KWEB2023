@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>KWEB_hw1</title>
+  <style>
+
+  div{
+    width:100%;
+    height:30px;
+  }
+  
+  </style>
+</head>
+<body>
+  <h2 style="text-align: left;">
+    KWEB Survey Page
+  </h2>
+  <img src="https://i.imgur.com/hSSFVSw.png" style="max-width:200px; height:50%;">
+  <div>
+    <a href="https://kwebofficial.com">KWEB Hompage</a><br>
+    
+  </div>
+  <form>
+    <p>
+    
+      <span class="query"><strong>1. Write your name.</strong></span><br>
+      <div id="survey-form"> 
+      <input type = "text" name="name">
+      </div>
+    </p>
+    <p>
+    
+      <span class="query"></sapn><strong>2. Write your student number</strong></span><br>
+      <div id="survey-form">  
+      <input type="number" name="id">
+      
+      </div>
+    </p>
+    <p>
+    
+      <span class="query"><strong>3. Select your member level.</strong></span><br>
+      <div id="survey-form">
+      <input type = "radio" name="level" value="Admin">Admin
+      <input type ="radio" name="level" value="Intern">Intern
+      <input type = "radio" name="level" value="Qualified">Qualified
+    </div>
+    </p>
+    <p>
+    
+      <span class="query"><strong>4. Select all fields you are interested in.</strong></span><br>
+      <div id="survey-form">  
+      <input type="checkbox" name="fields" value ="Front-end">Front-end
+      <input type="checkbox" name="fields" value ="Back-end">Back-end
+      <input type="checkbox" name="fields" value ="Web crawling">Web crawling
+      <input type="checkbox" name="fields" value ="Web security">Web security
+      <input type="checkbox" name="fields" value ="Etcetera">Etcetera
+      
+    </div>
+    </p>
+    <p>
+    
+      <span class="query"><strong>5.Give us your overall evaluation and feedback about the previous study.</strong></span><br>
+      <div id="survey-form">  
+      <textarea id="feedback" cols="50" rows="25"></textarea><br>
+    
+    <input type ="submit" value="Submit your answers">
+    </div>
+    </p>
+  </form>
+</body>
+</html>
