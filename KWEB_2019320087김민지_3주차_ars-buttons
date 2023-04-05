@@ -1,0 +1,18 @@
+.submit{
+    text-align: left;
+}
+.numbers{
+    text-align: center;
+    margin : 10px 0;
+}
+
+.number{
+    display: inline-block;
+    background-color: #F78181;
+    width:40px;
+    margin : 0 12px;
+    border-radius: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
