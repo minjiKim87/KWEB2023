@@ -1,0 +1,30 @@
+
+body {
+    background-color: skyblue;
+  }
+
+  h1 {
+    color: white;
+  }
+}
+
+
+@media screen and (min-width: 600px){
+  body {
+    background-color: blue;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+
+  h1 {
+    color: yellow;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: darkblue;
+  }
+}
