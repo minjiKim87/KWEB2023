@@ -1,0 +1,18 @@
+function getDivisors(x){
+var arr=[];
+j=0;
+for(var i =1;i<=Math.sqrt(x);i++){
+    if(x%i===0){
+        arr[j] = i;
+        arr[j+1] = x/i ;
+        j=j+2;
+    }
+
+}
+
+    arr.sort(function(a,b){
+         return a-b;
+    })
+
+    return arr;
+}
