@@ -1,0 +1,20 @@
+const ellipse = {
+  width: 10,
+  height: 5,
+  getArea() {
+    return Math.PI * this.width * this.height;
+  },
+  
+  getPerimeter() {
+    const a = this.width / 2;
+    const b = this.height / 2;
+    return 2 * Math.PI * Math.sqrt((a * a + b * b) / 2);
+  },
+  
+  getEccentricity() {
+    const a = this.width / 2;
+    const b = this.height / 2;
+    return Math.sqrt(1 - (b * b) / (a * a));
+  }
+  
+};
