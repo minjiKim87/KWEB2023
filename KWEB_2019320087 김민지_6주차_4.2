@@ -1,0 +1,18 @@
+//times-table.js
+
+const displayTimes = () => {
+  const inputNumber = parseInt(document.getElementById('number').value);
+  const resultContainer = document.getElementById('times-result');
+
+  if (inputNumber >= 1 && inputNumber <= 9) {
+    const result = [];
+
+    for (let i = 1; i <= 9; i++) {
+      result.push(inputNumber + ' X ' + i + ' = ' + inputNumber * i);
+    }
+
+    resultContainer.innerText = result.join('\n');
+  } else {
+    resultContainer.textContent = 'Input Error!';
+  }
+}
