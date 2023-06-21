@@ -1,0 +1,58 @@
+const MIN_ROW = 0;
+const MAX_ROW = 6;
+const MIN_COL = 0;
+const MAX_COL = 7;
+
+let currentPosition = { row: 5, col: 0 };
+
+function getElementByPosition(position) {
+  const cellsEl = document.getElementsByClassName('cells')[position.row];
+  return cellsEl.getElementsByClassName('cell')[position.col];
+}
+
+function getNewPositionByKey(key, currentPosition) {
+  const newPosition = {
+  row: currentPosition.row,
+  col: currentPosition.col,
+  }
+
+  switch (key) {
+    case 'ArrowUp':
+      newPosition.row--;
+      break;
+    case 'ArrowDown':
+      newPosition.row++;
+      break;
+    case 'ArrowLeft':
+      newPosition.col--;
+      break;
+    case 'ArrowRight':
+      newPosition.col++;
+      break;
+  }
+
+  return newPosition;
+}
+
+function isPositionInRange(position) {
+  return position.row >= MIN_ROW && position.row <= MAX_ROW && position.col >= MIN_COL && position.col <= MAX_COL;
+}
+function isPositionWall(position) {
+  return getElementByPosition(position).classList.contains('wall');
+}
+
+document.addEventListener('keyup',function(event) {
+  getElementByPosition(currentPosition).classList.remove('current');
+  let newPosition = getNewPositionByKey(event.key, currentPosition);
+
+  if (isPositionInRange(newPosition) && !isPositionWall(newPosition)) {
+    currentPosition.row = newPosition.row;
+    currentPosition.col = newPosition.col;
+}
+ let newElement = getElementByPosition(currentPosition);
+    newElement.classList.add('current');
+    if (newElement.classList.contains('target')) {
+      alert('You escaped!');
+    }
+
+});
